@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRide</title>
+    <title>Middle</title>
+    <link rel="stylesheet" href="..\CSS\style.css">
 </head>
 <body>
-    <header>
-
-    </header>
-
-    <main>
-
-    </main>
- 
-    <footer>
-
-    </footer>
-    
+    <div class="main">
+        <div class="main-header">
+            <div class="hero">
+            <img class="hero-img" src="..\Images\people-car-trip.jpg" alt="Une femme et un homme en voiture">
+            </div>
+            <div class="search-container">
+                <form class="search-form" action="search.html" method="get">
+                    <legend>Chercher un trajet</legend>
+                    <input class="search-start" type="text" placeholder="Rechercher un trajet..." name="Start">
+                    <input class="search-end" type="text" placeholder="Où allez-vous ?" name="destination">
+                    <input class="search-date" type="date" name="date">
+                    <input class="passenger-number" type="text" placeholder="Nombre de passagers" name="passengers">
+                    <button class="search-button" type="submit" onclick="searchTraject()" >Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-content-title">
+            <h1>EcoRide</h1>
+            <h3>Covoiturage</h3>
+        </div>
+        <div class="content">
+            <h1>Description</h1>
+            <p>Voici une présentation de l'entreprise EcoRide.</p>
+        </div>
 </body>
-</html>
