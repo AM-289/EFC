@@ -1,5 +1,5 @@
 <?php
-    require_once 'Includes/signup_view.php';
+    require_once '../Includes/signup_view.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 <body>
     <div class="signup-form">
         <h1>Créer un compte</h1>
-        <form action="Includes\signup_inc.php" method="POST">
+        <form action="../Includes/signup_inc.php" method="POST">
             <input type="text" name="name" placeholder="Nom">
             <input type="text" name="surname" placeholder="Prénom"> 
             <input type="text" name="username" placeholder="Nom d'utilisateur">

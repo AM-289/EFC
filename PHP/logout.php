@@ -12,7 +12,7 @@
     
     <div class="logout">
         <h2>Logout</h2>
-        <form action="Includes/logout_inc.php" method="POST">
+        <form action="../Includes/logout_inc.php" method="POST">
             <button>Se déconnecter</button>
     </div>
 
