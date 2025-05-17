@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $errors['username_taken'] = 'Nom d\'utilisateur déjà pris.';
             }
 
-        require_once 'config_session.inc.php';
+        require_once 'config_session.php';
 
         if ($error){
             $_SESSION['errors_signup'] = $errors;

@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors['login_incorrect'] = "Nom d'utilisateur ou mot de passe incorrect.";
         }
 
-        require_once 'config_session.inc.php';
+        require_once 'config_session.php';
 
         if ($errors) {
             $_SESSION['errors_login'] = $errors;
