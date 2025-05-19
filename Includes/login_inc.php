@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['last_regeneration'] = time(); 
 
         //header("Location: ../Connexion.php?login=success");
-        //header('Location: ../profile-try.php');
+        header('Location: ../PHP/next.php');
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement
@@ -55,6 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 } else {
-    header("Location: ../Connexion.php");
+    header("Location: ../PHP/login.php");
     die();
 }

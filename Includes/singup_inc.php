@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         require_once 'DBlink.php';
         require_once 'signup_model.php';
-        require_once 'signup_contrphp';
+        require_once 'signup_contr.php';
 
         // Error Handlers
             $errors = [];
@@ -43,13 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($error){
             $_SESSION['errors_signup'] = $errors;
-            header("Location: ../signup.php");
+            header("Location: ../PHP/signup.php");
             die();
         }
 
         create_user($pdo, $lname, $fsname, $username, $email, $pwd);
 
-        header("Location: ../index.php?signup=sucess");
+        header("Location: ../PHP/next.php?signup=sucess");
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement
@@ -61,6 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 } else {
-    header("Location: ../index.php");
+    header("Location: ../PHP/index.php");
     die();
 };
