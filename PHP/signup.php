@@ -6,13 +6,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/login-signup.css">
     <title>Créer un compte</title>
 </head>
 <body>
-    <div class="signup-form">
+    <div class="signup">
         <h1>Créer un compte</h1>
-        <form action="../Includes/singup_inc.php" method="POST">
+        <form class="signup-form" action="../Includes/singup_inc.php" method="POST">
             <input type="text" name="name" placeholder="Nom">
             <input type="text" name="surname" placeholder="Prénom"> 
             <input type="text" name="username" placeholder="Nom d'utilisateur">

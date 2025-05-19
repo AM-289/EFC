@@ -6,17 +6,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/login-signup.css">
+    <title>Connexion</title>
 </head>
 <body>
     
     <?php
         if (!isset($_SESSION['user_id'])) {?>
-        <div class="login-form">
+        <div class="login">
             <h1>Connexion</h1>
-            <form action="..\Includes\login_inc.php" method="POST">
-                <input type="text" name="username" placeholder="username" required>
+            <form class="login-form" action="..\Includes\login_inc.php" method="POST">
+                <input type="text" name="username" placeholder="Nom d'Utilisateur" required>
                 <input type="password" name="pwd" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>
             </form>

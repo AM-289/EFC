@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #626F47;
+    --secondary-color: #F5ECD5;
+    --third-color: #FFFFFF;
+    --text-color: #333;
+    --hover-color: #A4B465;
+    background-color: #626F47;
+}
+
+.signup, .login {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: 10% auto;
+    border: 4px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+.signup, h1, .signup-form,
+.login, .login-form {
+    background-color: var(--secondary-color);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-form, .login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+input {
+    justify-content: center;
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--third-color);
+}
+
+button {
+    padding: 5px;
+    background-color: var(--primary-color);
+    margin: 20px auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 768px) {
+    
+    *{
+        background-color: var(--hover-color);
+    }
+
+    .signup, .login {
+        width: auto;
+        margin: 10%;
+    }
+    
+}
