@@ -44,3 +44,7 @@ function is_username_taken(object $pdo, string $username) {
 function create_user(object $pdo, string $lname, string $fname, string $username, string $email, string $pwd) {
     set_user($pdo, $lname, $fname, $username, $email, $pwd);
 }
+
+function create_role(object $pdo, $role_type) {
+    set_role($pdo, $role_type);
+}

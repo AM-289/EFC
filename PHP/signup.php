@@ -20,6 +20,8 @@
             <input type="text" name="username" placeholder="Nom d'utilisateur">
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="pwd" placeholder="Mot de passe">
+            <input type="radio" name="role_type" value="passenger">Passager
+            <input type="radio" name="role_type" value="driver">Conducteur ou Passager-Conducteur
             <button type="submit">S'inscrire</button>
     </div>
 

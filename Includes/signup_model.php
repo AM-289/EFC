@@ -24,7 +24,7 @@ function get_username(object $pdo, string $username) {
     return $result;
 }
 
-function set_user(object $pdo, string $lname, string $fname, string $username, string $email, string $pwd){
+function set_user(object $pdo, string $lname, string $fname, string $username, string $email, string $pwd,){
     $query = 'INSERT INTO users (lname, fname, username, email, pwd) VALUES (:lname, :fname, :username, :email, :pwd);';
     $stmt = $pdo->prepare($query);
 
@@ -36,5 +36,13 @@ function set_user(object $pdo, string $lname, string $fname, string $username, s
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':pwd', $hashed_pwd);
+    $stmt->execute();
+}
+
+function set_role(object $pdo, $role_type){
+    $query = 'INSERT INTO roles (role_type) VALUES (:role_type);';
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(':role_type', $role_type);
     $stmt->execute();
 }

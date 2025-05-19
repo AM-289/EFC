@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
+    $role_type = $_POST['role_type'];
 
     try {
 
@@ -40,14 +41,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
         require_once 'config_session.php';
-
+/*
         if ($error){
             $_SESSION['errors_signup'] = $errors;
             header("Location: ../PHP/signup.php");
             die();
         }
-
+*/
         create_user($pdo, $lname, $fsname, $username, $email, $pwd);
+        create_role($pdo, $role_type);
 
         header("Location: ../PHP/next.php?signup=sucess");
 
