@@ -14,7 +14,7 @@ footer {
     color: var(--text-color);
     position: fixed;
     bottom: 0;
-    height: 250px;
+    height: 180px;
     width: 100%;
 }
 
@@ -34,7 +34,7 @@ address {
     justify-content: left;
     gap: 80px;
     margin: 20px;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .container{
@@ -42,7 +42,7 @@ address {
 }
 
 .container-title {
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 ul {
@@ -90,6 +90,7 @@ address {
     position: absolute;
     bottom: 0;
     margin: 30px;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 768px) {
