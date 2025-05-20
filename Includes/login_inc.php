@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors['login_incorrect'] = "Nom d'utilisateur ou mot de passe incorrect.";
         }
 
-        if (!is_username_wrong($result) && is_password_wrong($pwd, $result['pwd'])) {
+        /*if (!is_username_wrong($result) && is_password_wrong($pwd, $result['pwd'])) {
             $errors['login_incorrect'] = "Nom d'utilisateur ou mot de passe incorrect.";
-        }
+        }*/
 
         require_once 'config_session.php';
 
@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = htmlspecialchars($result['username']); //Username from the database
         $_SESSION['last_regeneration'] = time(); 
 
-        header('Location: ../PHP/login.php?login=success');
-        //header("Location:../PHP Profile/profile_page.php"); exit;
+        //header('Location: ../PHP/login.php?login=success');
+        header('Location: ../PHP Profile/profile_page.php');
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement

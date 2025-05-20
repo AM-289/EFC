@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         create_user($pdo, $lname, $fsname, $username, $email, $pwd);
         create_role($pdo, $role_type);
 
-        header("Location: ../PHP/next.php?signup=sucess");
+        header("Location: ../PHP Profile/profile_page.php?signup=sucess");
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement

@@ -1,8 +1,8 @@
 <?php
 
-    include_once 'Classes/dbh.classes.php';
-    include_once 'Classes/profileinfo_classes.php';
-    include_once 'Classes/profileinfo_view.php';
+    include_once '../Includes/dbh_class.php';
+    include_once '../Includes/profileinfo_classes.php';
+    include_once '../Includes/profileinfo_view.php';
     $profileInfo = new ProfileInfoView();
 ?>
 
@@ -18,17 +18,25 @@
 <h3>About</h3>
 
 <h3>
-    <?php output_username()?>
+ Bienvenu
 </h3>
 
-<p>
+<!--<p>
     <?php
+
+    //include_once('../HTML/logout.php');
+    /*
         $profileInfo->fetchAbout($_SESSION['userid']);//to display the data
         $profileInfo->fetchTitle($_SESSION['userid']);
 
-        echo $_SESSION['useruid']; //to display the data
+        echo $_SESSION['useruid']; //to display the data*/
     ?>
-</p>
+</p>-->
+        <div class="logout">
+        <h2>Logout</h2>
+        <form action="../Includes/logout_inc.php" method="POST">
+            <button>Se déconnecter</button>
+    </div>
 
 </body>
 </html>
