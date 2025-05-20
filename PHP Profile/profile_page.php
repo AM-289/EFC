@@ -32,6 +32,11 @@
         echo $_SESSION['useruid']; //to display the data*/
     ?>
 </p>-->
+
+    <div class="profile-pic">
+        <?php $profileInfo->fetchProfilePic($_SESSION['user_id']);?>
+    </div>
+
         <div class="logout">
         <h2>Logout</h2>
         <form action="../Includes/logout_inc.php" method="POST">

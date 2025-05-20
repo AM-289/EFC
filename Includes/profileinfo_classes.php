@@ -2,10 +2,10 @@
 
 class ProfileInfo extends Dbh {
 
-    protected function getProfileInfo($userId) {
+    protected function getProfileInfo($user_Id) {
         $stmt = $this->connect()->prepare('SELECT * FROM users WHERE user_id = ?;');
 
-        if(!$stmt->execute(array($userId))) {
+        if(!$stmt->execute(array($user_Id))) {
             $stmt = null;
             header("Location: ../PHP Profile/profile_page.php?error=stmtfailed");
             exit();
@@ -22,10 +22,10 @@ class ProfileInfo extends Dbh {
         return $profileData;
     }
 
-    protected function setNewProfileInfo($profileAbout, $profileTitle, $profileText, $userId) {
-        $stmt = $this->connect()->prepare('UPDATE users SET profiles_about = ?, profiles_introtitle = ?, profile_introtext = ? WHERE users_id = ? ;');
+    protected function setNewProfileInfo($profilePic, $profileAbout, $profileTitle, $profileText, $user_id) {
+        $stmt = $this->connect()->prepare('UPDATE users SET profile_pic = ?, profiles_about = ?, profiles_introtitle = ?, profile_introtext = ? WHERE users_id = ? ;');
 
-        if(!$stmt->execute(array($$profileAbout, $profileTitle, $profileText, $userId))) {
+        if(!$stmt->execute(array($profilePic, $profileAbout, $profileTitle, $profileText, $user_id))) {
             $stmt = null;
             header("Location: ../PHP Profile/profile_page.php?error=stmtfailed");
             exit();
@@ -34,10 +34,10 @@ class ProfileInfo extends Dbh {
         $stmt = null;
     }
 
-    protected function setProfileInfo($profileAbout, $profileTitle, $profileText, $userId) {
-        $stmt = $this->connect()->prepare('INSERT INTO users (profile_about, profile_introtitle, profile_introtext, user_id) VALUES (?, ?, ?, ?);');
+    protected function setProfileInfo($profilePic, $profileAbout, $profileTitle, $profileText, $user_Id) {
+        $stmt = $this->connect()->prepare('INSERT INTO users (profile_pic, profile_about, profile_introtitle, profile_introtext, user_id) VALUES (?, ?, ?, ?, ?);');
 
-        if(!$stmt->execute(array($$profileAbout, $profileTitle, $profileText, $userId))) {
+        if(!$stmt->execute(array($profilePic, $profileAbout, $profileTitle, $profileText, $user_Id))) {
             $stmt = null;
             header("Location: ../PHP Profile/profile_page.php?error=stmtfailed");
             exit();

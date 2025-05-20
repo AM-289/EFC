@@ -2,16 +2,22 @@
 
 class ProfileInfoView extends ProfileInfo {
  
-    public function fetchAbout($userId) {
+    public function fetchProfilePic($user_id) {
+        $profileInfo = $this->getProfileInfo($user_id);
 
-        $profileInfo = $this->getProfileInfo($userId);
+        echo $profileInfo[0]['profile_pic'];
+    }
+
+    public function fetchAbout($user_id) {
+
+        $profileInfo = $this->getProfileInfo($user_id);
 
         echo $profileInfo[0]['profiles_about'];//name of the column
     }
     
-    public function fetchTitle($userId) {
+    public function fetchTitle($user_id) {
 
-        $profileInfo = $this->getProfileInfo($userId);
+        $profileInfo = $this->getProfileInfo($user_id);
         
         echo $profileInfo[0]['profiles_introtitle'];//name of the column
     }

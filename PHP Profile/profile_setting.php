@@ -1,7 +1,4 @@
 <?php
-
-
-
     $profileInfo = new ProfileInfoView();
 ?>
 
@@ -18,9 +15,11 @@
 
 <p>Modifier profile</p>
 <form action="../Includes/profile_info.php" method='POST'>
-    <textarea name="about"><?php $profileInfo->fetchAbout($_SESSION['userid']); ?></textarea>
-    <input type="text" name="introtitle" value="<?php $profileInfo->fetchTitle($_SESSION['userid']); ?>">
-    <textarea name="introtext"><?php $profileInfo->fetchText($_SESSION['userid']); ?></textarea>
+    <input type="image" value="<?php $profileInfo->fetchProfilePic($_SESSION['user_id']);?>">
+
+    <textarea name="about"><?php $profileInfo->fetchAbout($_SESSION['user_id']); ?></textarea>
+    <input type="text" name="introtitle" value="<?php $profileInfo->fetchTitle($_SESSION['user_id']); ?>">
+    <textarea name="introtext"><?php $profileInfo->fetchText($_SESSION['user_id']); ?></textarea>
     <button type="submit" name="submit"></button>
 </form>
 
