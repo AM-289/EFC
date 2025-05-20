@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($errors) {
             $_SESSION['errors_login'] = $errors;
-            header("Location: ../PHP/login.php");
+            header('Location: ../PHP/login.php');
             die();
         }
 
@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = htmlspecialchars($result['username']); //Username from the database
         $_SESSION['last_regeneration'] = time(); 
 
-        //header("Location: ../Connexion.php?login=success");
-        header('Location: ../PHP/next.php');
+        header('Location: ../PHP/login.php?login=success');
+        //header("Location:../PHP Profile/profile_page.php"); exit;
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement

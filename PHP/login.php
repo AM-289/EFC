@@ -1,4 +1,5 @@
 <?php
+    require_once '../Includes/config_session.php';
     require_once '../Includes/login_view.php';
 ?>
 
@@ -29,6 +30,12 @@
     // Display login errors if any
     check_login_errors();
     ?>
+
+        <div class="logout">
+        <h2>Logout</h2>
+        <form action="../Includes/logout_inc.php" method="POST">
+            <button>Se déconnecter</button>
+    </div>
 
 </body>
 </html>
