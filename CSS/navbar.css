@@ -21,7 +21,7 @@ logo {
 }
 
 .logo-img-desktop {
-    width: 18em;
+    width: 14em;
     margin-right: 1em;
     margin-top: 1em;
 }
@@ -41,7 +41,7 @@ nav{
     padding: 20px 50px;
     background-color: var(--primary-color);
     position: relative;
-    height: 140px;
+    height: 100px;
 }
 
 nav ul{
@@ -73,7 +73,7 @@ nav ul{
     width: 116px;
     height: 60px;
     right: 12px;
-    top: 40px;
+    top: 20px;
     filter: invert(100%) sepia(52%) saturate(754%) hue-rotate(310deg) brightness(102%) contrast(92%);
 }
 
@@ -141,12 +141,10 @@ nav ul{
         margin: 20px 0; /* Spacing between menu items */
     }
 
-    #mobile-login {
-        visibility: visible;
-    }
-
     .navbar-toggle {
-        display: block; /* Show hamburger menu button */
+        display: flex; /* Show hamburger menu button */
+        justify-content: right;
+        margin-right: -200px;
     }
 
     .navbar-toggle.active .navbar-toggle-icon {
@@ -184,5 +182,19 @@ nav ul{
 
     .navbar-menu.active {
         display: block; /* Show menu items when active */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+    .login-icon {
+        display: none;
+    }
+    
+
+
+    #mobile-login {
+        visibility: visible;
     }
 }
