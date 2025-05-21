@@ -51,7 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         create_user($pdo, $lname, $fsname, $username, $email, $pwd);
         create_role($pdo, $role_type);
 
-        header("Location: ../PHP Profile/profile_page.php?signup=sucess");
+        switch ($role_type) {
+            case 'driver' :
+                header('Location: ../PHP Profile/driver_profile.php?signup=succes');
+                break;
+            case 'passenger' :
+                header('Location: ../PHP Profile/profile_page.php?signup=succes');
+                break;
+        }
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement

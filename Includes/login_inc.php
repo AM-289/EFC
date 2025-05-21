@@ -42,8 +42,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = htmlspecialchars($result['username']); //Username from the database
         $_SESSION['last_regeneration'] = time(); 
 
-        //header('Location: ../PHP/login.php?login=success');
-        header('Location: ../PHP Profile/profile_page.php');
+        /*$result = get_user_role($pdo, $username);
+
+        switch ($role_type) {
+            case 'admin' :
+                header('Location: ../PHP Profile/admin.php?login=succes');
+                break;
+            case 'driver' :
+                header('Location: ../PHP Profile/driver_profile.php?login=succes');
+                break;
+            case 'passenger' :
+                header('Location: ../PHP Profile/profile_page.php?login=succes');
+                break;
+        }*/
+
+        header('location: ../PHP Profile/profile_page.php?login=succes');
 
         $pdo = null; // Close the connection
         $stmt = null; // Close the statement
