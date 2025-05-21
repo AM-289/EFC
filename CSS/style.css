@@ -105,11 +105,12 @@ form input {
 
 .main-content {
     position: flex;
-    height: 1500px;
+    flex-direction: column;
+    height: 1200px;
     margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 100px;
+    border-radius: 50px;
 }
 
 .main-content, .main-content-title, .content, h1, h3, p {
@@ -119,7 +120,7 @@ form input {
 .main-content-title {
     display: flex;
     justify-content: center;
-    height: 200px;
+    height: 100px;
     margin-top: 40px;
     border-radius: 50px;
 }
@@ -131,6 +132,54 @@ form input {
 .content {
     display: flex;
     justify-content: center;
+}
+
+.main-content img {
+    width: 250px;
+    border-radius: 30px;
+} 
+
+.content_box1, .content_box2, .content_box3 {
+    display: flex-box;
+    flex-direction: row;
+    border-radius: 50px;
+}
+
+.content_box1 {
+    background-color: var(--third-color);
+    height: 300px;
+}
+
+
+
+.content_box2, .content_box2 h2, .content_box2 p {
+    background-color: #F0BB78;
+}
+
+.content_box2 h2 {
+    height: 400px;
+    margin: 20px;
+    margin-left: 60px;
+    border-radius: 50px;
+    height: 80px;
+    padding: 60px;
+    font-size: 40px;
+    align-self: left;
+}
+
+.content_box2 p {
+    width: 60%;
+    margin-left: 60px;
+    align-self: left;
+}
+
+.img_box2 {
+    display: flexbox;
+    align-self: right;   
+}
+
+.content_box3, .content_box3 h2, .content_box3 p {
+    background-color: var(--third-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -153,5 +202,18 @@ form input {
         width: 100%;
         margin: 0;
         margin-top: 20px;
+    }
+
+    .main-content {
+        margin: 10px 0;
+    }
+
+    .main-content img {
+        width: 140px;
+        align-content: center;
+    }
+
+    .content_box1 p, .content_box2 p, .content_box3 p {
+        width: 80%;
     }
 }
