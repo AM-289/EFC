@@ -4,22 +4,25 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     --primary-color: #626F47;
-    --secondary-color: #dfdecb;
+    --secondary-color: #F5ECD5;
+    --third-color: #FFFFFF;
     --text-color: #333;
-    --hover-color: salmon;
+    --hover-color: #A4B465;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
     background-color: var(--primary-color);
     color: var(--text-color);
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 1200;
     height: 180px;
     width: 100%;
 }
 
 .main-footer {
-    display: flex;
+    position: flex;
+    bottom: 0;
 }
 
 address {
@@ -65,6 +68,7 @@ address {
 
 .contact {
     margin: 10px;
+    margin-top: -150px;
     font-size: 20px;
 }
 
@@ -76,6 +80,10 @@ address {
 .social-media {
     margin: 20px;
     font-size: 20px;
+}
+
+.contact, .email, .network, .copyright {
+    background-color: var(--primary-color);
 }
 
 /*Copryright Styles*/
