@@ -8,7 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $registration = $_POST['registration'];
     $f_registration = $_POST['first_registration'];
     $seats_num = $_POST['seats_num'];
-    
+    $username=$_GET['username']??"";
+
     try {
 
         require_once 'DBlink.php';
@@ -22,6 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         create_car($pdo, $brand, $energy, $car_color, $registration, $f_registration, $seats_num);
+        link_cars_to_username($pdo, $username);
+
+
 
         header('Location: ../PHP Profile/driver_profile.php');
 
@@ -38,3 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: ../PHP/index.php");
     die();
 };
+

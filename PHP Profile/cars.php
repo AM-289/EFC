@@ -48,9 +48,9 @@
         </div>
         <input type="text" name="registration" placeholder="Plaque d'immatriculation">
         <label name="first_registration">Première date d'enregistrement de la plaque :</label>
+        <input type="date" name="first_registration">
         <label for="seats_num">Nombre de places disponibles :</label>
         <input type="number" name="seats_num" id="seats_num"> 
-        <input type="date" name="first_registration">
         <button type="submit">Enregistrer la voiture</button>
     </form>
 <!--

@@ -5,7 +5,7 @@
     include_once '../Includes/profileinfo_view.php';
     $profileInfo = new ProfileInfoView();
 
-    
+    /*
     $query = 'SELECT * FROM cars';
 
     try {
@@ -24,7 +24,7 @@
         echo "Erreur". $e->getMessage();
     }
 
-    $conn->close();
+    //$conn->close();*/
 ?>
 
 <!DOCTYPE html>
@@ -50,8 +50,8 @@
                     <th>Couleur</th>
                     <th>Places</th>
                 </tr>
-                <?php
-                    while($row=$result->fetch_assoc()) {
+             <!--   <?php
+                    //while($row=$result->fetch_assoc()) {
                 ?>
                 <tr>
                     <td><?php echo $row['brand']?></td>
@@ -60,8 +60,8 @@
                     <td><?php echo $row['seats_num']?></td>
                 </tr>
                 <?php
-                    }
-                ?>
+                 //   }
+                ?>-->
             </table>
         </div>
         <button onclick="location.href='cars.php'">Ajouter une voiture</button>

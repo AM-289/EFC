@@ -14,3 +14,11 @@ function set_car($pdo, $brand, $energy, $car_color, $registration, $f_registrati
     $stmt->bindParam(':seats_num', $seats_num);
     $stmt->execute();
 }
+
+function set_username_in_car ($pdo, $username) {
+    $query1 = 'INSERT INTO cars (username) SELECT username FROM users WHERE username = :username;';
+    $stmt = $pdo->prepare($query1);
+
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+}
