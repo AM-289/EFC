@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRide</title>
+    <title>Middle</title>
+    <link rel="stylesheet" href="..\CSS\style.css">
 </head>
 <body>
-    <header>
+    <div class="main">
+        <div class="main-header">
+            <div class="hero">
+            <img class="hero-img" src="..\Images\people-car-trip.jpg" alt="Une femme et un homme en voiture">
+            </div>
+            <div class="search-container">
+                <form class="search-form" action="search.html" method="get">
+                    <legend>Chercher un trajet</legend>
+                    <input class="search-start" type="text" placeholder="Rechercher un trajet..." name="Start">
+                    <input class="search-end" type="text" placeholder="Où allez-vous ?" name="destination">
+                    <input class="search-date" type="date" name="date">
+                    <input class="passenger-number" type="text" placeholder="Nombre de passagers" name="passengers">
+                    <button class="search-button" type="submit" onclick="searchTraject()" >Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-content-title">
+            <h1>EcoRide</h1>
+            <h3>Covoiturage</h3>
+        </div>
+        <div class="content_box1">
+            
+            <img class="img_box1" src="../Images/pic_1.jpg" alt="une femme a la fenêtre d'une voiture tenant dans sa main une fleur">
+            <h2>Description</h2>
+            <p>Voici une présentation de l'entreprise EcoRide.</p>
+        </div>
+        <div class="content_box2">
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur veritatis laudantium minima sed aspernatur nisi deserunt ut dicta. Vero odit sapiente asperiores explicabo magni mollitia totam iusto nesciunt itaque beatae.</p>
+            <img class="img_box2" src="../Images/pic_2.jpg" alt="Un passager satisfait de son covoiturage">            
+        </div>
 
-    </header>
-
-    <main>
-
-    </main>
- 
-    <footer>
-
-    </footer>
-    
+        <div class="content_box3">
+            <img src="../Images/pic_3.jpg" alt="Two people sitting inside a car parked in a rural area, one in the driver seat and one in the passenger seat, both appearing relaxed and enjoying each other's company, with a calm and friendly atmosphere" class="img_box3">
+            <h2>Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dolorem. Iusto debitis, dolorum accusamus temporibus veritatis eaque quam, placeat porro consectetur omnis ipsam, aliquam aliquid nostrum cum provident assumenda harum!</p>
+        </div>
 </body>
-</html>
