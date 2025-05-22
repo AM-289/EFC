@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $energy = $_POST['energy'];
     $registration = $_POST['registration'];
     $f_registration = $_POST['first_registration'];
+    $seats_num = $_POST['seats_num'];
     
     try {
 
@@ -20,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         }
 
-        create_car($pdo, $brand, $energy, $car_color, $registration, $f_registration);
+        create_car($pdo, $brand, $energy, $car_color, $registration, $f_registration, $seats_num);
 
-        header('Location: ../PHP Profile/profile-page.php');
+        header('Location: ../PHP Profile/driver_profile.php');
 
         $pdo = null;
         $stmt = null;

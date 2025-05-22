@@ -45,6 +45,6 @@ function create_user(object $pdo, string $lname, string $fname, string $username
     set_user($pdo, $lname, $fname, $username, $email, $pwd);
 }
 
-function create_role(object $pdo, $role_type) {
-    set_role($pdo, $role_type);
+function create_role(object $pdo, $role_type, $username) {
+    set_role($pdo, $role_type, $username);
 }

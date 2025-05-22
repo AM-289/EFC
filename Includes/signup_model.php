@@ -39,10 +39,11 @@ function set_user(object $pdo, string $lname, string $fname, string $username, s
     $stmt->execute();
 }
 
-function set_role(object $pdo, $role_type){
-    $query = 'INSERT INTO roles (role_type) VALUES (:role_type);';
+function set_role(object $pdo, $role_type, $username){
+    $query = 'INSERT INTO roles (role_type, username) VALUES (:role_type, :username);';
     $stmt = $pdo->prepare($query);
 
     $stmt->bindParam(':role_type', $role_type);
+    $stmt->bindParam(':username', $username);
     $stmt->execute();
 }

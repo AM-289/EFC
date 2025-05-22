@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-function set_car($pdo, $brand, $energy, $car_color, $registration, $f_registration) {
-    $query = 'INSERT INTO cars (brand, energy, car_color, registration, f_registration) VALUES (:brand, :energy, :car_color, :registration, :f_registration);';
+function set_car($pdo, $brand, $energy, $car_color, $registration, $f_registration, $seats_num) {
+    $query = 'INSERT INTO cars (brand, energy, car_color, registration, f_registration, seats_num) VALUES (:brand, :energy, :car_color, :registration, :f_registration, :seats_num);';
     $stmt = $pdo->prepare($query);
 
     $stmt->bindParam(':brand', $brand);
@@ -11,5 +11,6 @@ function set_car($pdo, $brand, $energy, $car_color, $registration, $f_registrati
     $stmt->bindParam(':car_color', $car_color);
     $stmt->bindParam(':registration', $registration);
     $stmt->bindParam(':f_registration', $f_registration);
+    $stmt->bindParam(':seats_num', $seats_num);
     $stmt->execute();
 }

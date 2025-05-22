@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 */
         create_user($pdo, $lname, $fsname, $username, $email, $pwd);
-        create_role($pdo, $role_type);
+        create_role($pdo, $role_type, $username);
 
         switch ($role_type) {
             case 'driver' :

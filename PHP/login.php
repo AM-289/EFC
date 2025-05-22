@@ -23,9 +23,12 @@
                 <input type="password" name="pwd" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>
             </form>
-        </div>
     <?php } ?>
-
+            <div class="signup_link">
+                <p>Pas encore de compte ?</p>
+                <a href="signup.php">Créez-en un</a>
+            </div>
+        </div>
     <?php
     // Display login errors if any
     check_login_errors();
